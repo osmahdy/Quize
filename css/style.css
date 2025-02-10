@@ -1,0 +1,171 @@
+*,
+:after,
+:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: poppins;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.quize {
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+}
+
+.quize .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.quize .top p {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.quize .top .timer:hover {
+  cursor: default;
+  color: white;
+  background-color: #f69e0b;
+}
+.quize .center {
+  padding: 10px;
+}
+.quize .center h3 {
+  font-size: 25px;
+  margin: 20px 0;
+}
+
+.quize .center .answer {
+  margin: 10px 0;
+  padding: 10px;
+  color: #00000090;
+  font-size: 15px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 15px;
+  display: flex;
+}
+.quize .center .answer:hover {
+  background-color: #005cc880;
+  color: white;
+  position: relative;
+}
+.quize .center .answer input[type='radio'] {
+  position: relative;
+  top: 1px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.quize .center .answer label {
+  width: 100%;
+  margin: -10px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.quize .final_result {
+  padding: 10px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quize .final_result p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.quize .btns {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.quize .btns .btn {
+  padding: 10px;
+  border-radius: 10px;
+  width: 25%;
+  text-align: center;
+  transition: 0.3s;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.quize .btns .back {
+  background-color: #f44036;
+}
+.quize .btns .next {
+  background-color: #f69e0b;
+}
+.quize .btns .disabled {
+  opacity: 1;
+  color: white;
+  cursor: default;
+}
+.quize .btns .btn:hover {
+  opacity: 1;
+  color: white;
+}
+.quize .btns .question_number:hover {
+  background-color: #eee;
+  color: black;
+}
+.quize .retry_section {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.quize .retry_section .retry_btn {
+  padding: 10px;
+  border-radius: 10px;
+  width: 25%;
+  text-align: center;
+  transition: 0.3s;
+  opacity: 0.7;
+  cursor: pointer;
+  background-color: #f69e0b;
+}
+.quize .retry_section .retry_btn:hover {
+  opacity: 1;
+  color: white;
+}
+.tags {
+  width: 210px;
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 40px);
+  height: fit-content;
+  padding: 5px;
+}
+.tags span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+  margin: 3px;
+  height: 30px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.tags span.active,
+.tags span:hover {
+  background-color: #f69e0b;
+  color: white;
+  cursor: pointer;
+}
