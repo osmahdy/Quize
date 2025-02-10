@@ -25,6 +25,7 @@ let result = 0;
 let currentIndex = 0;
 let numberOfAnswrs = 4;
 currentQuestionNumber.textContent = 1;
+let countDownInterval;
 getQuestions();
 function getQuestions() {
   let myRequest = new XMLHttpRequest();
@@ -83,6 +84,7 @@ function getQuestions() {
       };
       //when clicking the retry btn
       retrybtn.onclick = () => {
+        clearInterval(countDownInterval);
         RetrySection.style.display = 'none';
         finalResult.style.display = 'none';
         bottomSection.style.display = 'flex';
@@ -129,7 +131,6 @@ function moveTags(index) {
     }
   });
 }
-
 
 function clickTags(obj, qcount) {
   let QuestionsTagsSpans = document.querySelectorAll('.tags span');
@@ -250,7 +251,6 @@ function showFinalResult(qcount) {
 }
 
 function countdown(obj, qcount) {
-  let countDownInterval;
   let MTime, STime;
   let allTimeInSecounds = qcount * 30;
   countDownInterval = setInterval(() => {
