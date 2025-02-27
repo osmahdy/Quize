@@ -238,7 +238,7 @@ function showFinalResult(qcount) {
   if (result < 0.25 * qcount) {
     statusSentence.textContent = 'So Bad !!';
   }
-  if (result < 0.75 * qcount && result > 0.25 * qcount) {
+  if (result < 0.75 * qcount && result > 0.25 * qcount) { 
     statusSentence.textContent = 'Not Bad !!';
   }
   if (result > 0.75 * qcount) {
